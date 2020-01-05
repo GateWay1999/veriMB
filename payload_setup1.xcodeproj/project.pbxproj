@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DA9B8EDC23C2482C0055B15F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EDB23C2482C0055B15F /* main.cpp */; };
+		DA9B8EE923C24C0D0055B15F /* libaccum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EE823C24C0D0055B15F /* libaccum.a */; };
+		DA9B8EEC23C24E680055B15F /* pattern_loader.h in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EEB23C24E670055B15F /* pattern_loader.h */; };
+		DA9B8EEE23C24E740055B15F /* pattern_loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EED23C24E740055B15F /* pattern_loader.cc */; };
+		DA9B8EF023C24EB30055B15F /* aho_corasick.h in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EEF23C24EB30055B15F /* aho_corasick.h */; };
+		DA9B8EF223C24EB60055B15F /* ac_adaptor.h in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EF123C24EB60055B15F /* ac_adaptor.h */; };
+		DA9B8EF423C24EB80055B15F /* ac_adaptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EF323C24EB80055B15F /* ac_adaptor.cc */; };
+		DA9B8EF723C24F8F0055B15F /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EF523C24F8F0055B15F /* libgmp.dylib */; };
+		DA9B8EF823C24F8F0055B15F /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EF623C24F8F0055B15F /* libgmp.a */; };
+		DA9B8EFA23C2503D0055B15F /* libdclxvi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EF923C2503D0055B15F /* libdclxvi.a */; };
+		DA9B8EFD23C2507B0055B15F /* libflint.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EFB23C2507B0055B15F /* libflint.dylib */; };
+		DA9B8EFE23C2507B0055B15F /* libflint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EFC23C2507B0055B15F /* libflint.a */; };
+		DA9B8F0023C250AE0055B15F /* libcryptopp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EFF23C250AE0055B15F /* libcryptopp.a */; };
+		DA9B8F0323C251120055B15F /* libmpfr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8F0123C251120055B15F /* libmpfr.a */; };
+		DA9B8F0423C251120055B15F /* libmpfr.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8F0223C251120055B15F /* libmpfr.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +39,25 @@
 /* Begin PBXFileReference section */
 		DA9B8ED823C2482C0055B15F /* payload_setup1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = payload_setup1; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9B8EDB23C2482C0055B15F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DA9B8EE223C248DD0055B15F /* libverimb */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libverimb; sourceTree = "<group>"; };
+		DA9B8EE323C248DE0055B15F /* snort.pat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snort.pat; sourceTree = "<group>"; };
+		DA9B8EE423C248DE0055B15F /* snort_test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snort_test.txt; sourceTree = "<group>"; };
+		DA9B8EE523C248DE0055B15F /* snort_test.pat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snort_test.pat; sourceTree = "<group>"; };
+		DA9B8EE623C24BD30055B15F /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		DA9B8EE823C24C0D0055B15F /* libaccum.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libaccum.a; path = "payload_setup1/lib/crypto-accumulators-master/lib/libaccum.a"; sourceTree = "<group>"; };
+		DA9B8EEB23C24E670055B15F /* pattern_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pattern_loader.h; sourceTree = "<group>"; };
+		DA9B8EED23C24E740055B15F /* pattern_loader.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pattern_loader.cc; path = payload_setup1/libverimb/pattern_loader.cc; sourceTree = "<group>"; };
+		DA9B8EEF23C24EB30055B15F /* aho_corasick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = aho_corasick.h; path = payload_setup1/libverimb/ac/aho_corasick.h; sourceTree = "<group>"; };
+		DA9B8EF123C24EB60055B15F /* ac_adaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ac_adaptor.h; path = payload_setup1/libverimb/ac/ac_adaptor.h; sourceTree = "<group>"; };
+		DA9B8EF323C24EB80055B15F /* ac_adaptor.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ac_adaptor.cc; path = payload_setup1/libverimb/ac/ac_adaptor.cc; sourceTree = "<group>"; };
+		DA9B8EF523C24F8F0055B15F /* libgmp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmp.dylib; path = payload_setup1/lib/libgmp.dylib; sourceTree = "<group>"; };
+		DA9B8EF623C24F8F0055B15F /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmp.a; path = payload_setup1/lib/libgmp.a; sourceTree = "<group>"; };
+		DA9B8EF923C2503D0055B15F /* libdclxvi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdclxvi.a; path = "payload_setup1/lib/crypto-accumulators-master/ext/dclxvi-20130411/libdclxvi.a"; sourceTree = "<group>"; };
+		DA9B8EFB23C2507B0055B15F /* libflint.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libflint.dylib; path = payload_setup1/lib/libflint.dylib; sourceTree = "<group>"; };
+		DA9B8EFC23C2507B0055B15F /* libflint.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libflint.a; path = payload_setup1/lib/libflint.a; sourceTree = "<group>"; };
+		DA9B8EFF23C250AE0055B15F /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = payload_setup1/lib/libcryptopp.a; sourceTree = "<group>"; };
+		DA9B8F0123C251120055B15F /* libmpfr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmpfr.a; path = payload_setup1/lib/libmpfr.a; sourceTree = "<group>"; };
+		DA9B8F0223C251120055B15F /* libmpfr.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmpfr.dylib; path = payload_setup1/lib/libmpfr.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +65,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9B8F0323C251120055B15F /* libmpfr.a in Frameworks */,
+				DA9B8F0423C251120055B15F /* libmpfr.dylib in Frameworks */,
+				DA9B8F0023C250AE0055B15F /* libcryptopp.a in Frameworks */,
+				DA9B8EFD23C2507B0055B15F /* libflint.dylib in Frameworks */,
+				DA9B8EFE23C2507B0055B15F /* libflint.a in Frameworks */,
+				DA9B8EFA23C2503D0055B15F /* libdclxvi.a in Frameworks */,
+				DA9B8EF723C24F8F0055B15F /* libgmp.dylib in Frameworks */,
+				DA9B8EF823C24F8F0055B15F /* libgmp.a in Frameworks */,
+				DA9B8EE923C24C0D0055B15F /* libaccum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +83,14 @@
 		DA9B8ECF23C2482B0055B15F = {
 			isa = PBXGroup;
 			children = (
+				DA9B8EF323C24EB80055B15F /* ac_adaptor.cc */,
+				DA9B8EF123C24EB60055B15F /* ac_adaptor.h */,
+				DA9B8EEF23C24EB30055B15F /* aho_corasick.h */,
+				DA9B8EED23C24E740055B15F /* pattern_loader.cc */,
+				DA9B8EEB23C24E670055B15F /* pattern_loader.h */,
 				DA9B8EDA23C2482C0055B15F /* payload_setup1 */,
 				DA9B8ED923C2482C0055B15F /* Products */,
+				DA9B8EE723C24C0D0055B15F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +105,30 @@
 		DA9B8EDA23C2482C0055B15F /* payload_setup1 */ = {
 			isa = PBXGroup;
 			children = (
+				DA9B8EE623C24BD30055B15F /* lib */,
 				DA9B8EDB23C2482C0055B15F /* main.cpp */,
+				DA9B8EE223C248DD0055B15F /* libverimb */,
+				DA9B8EE523C248DE0055B15F /* snort_test.pat */,
+				DA9B8EE423C248DE0055B15F /* snort_test.txt */,
+				DA9B8EE323C248DE0055B15F /* snort.pat */,
 			);
 			path = payload_setup1;
+			sourceTree = "<group>";
+		};
+		DA9B8EE723C24C0D0055B15F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9B8F0123C251120055B15F /* libmpfr.a */,
+				DA9B8F0223C251120055B15F /* libmpfr.dylib */,
+				DA9B8EFF23C250AE0055B15F /* libcryptopp.a */,
+				DA9B8EFC23C2507B0055B15F /* libflint.a */,
+				DA9B8EFB23C2507B0055B15F /* libflint.dylib */,
+				DA9B8EF923C2503D0055B15F /* libdclxvi.a */,
+				DA9B8EF623C24F8F0055B15F /* libgmp.a */,
+				DA9B8EF523C24F8F0055B15F /* libgmp.dylib */,
+				DA9B8EE823C24C0D0055B15F /* libaccum.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9B8EDC23C2482C0055B15F /* main.cpp in Sources */,
+				DA9B8EEC23C24E680055B15F /* pattern_loader.h in Sources */,
+				DA9B8EEE23C24E740055B15F /* pattern_loader.cc in Sources */,
+				DA9B8EF023C24EB30055B15F /* aho_corasick.h in Sources */,
+				DA9B8EF223C24EB60055B15F /* ac_adaptor.h in Sources */,
+				DA9B8EF423C24EB80055B15F /* ac_adaptor.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +250,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"/Users/gengwei/Desktop/veriMB/payload_setup1/payload_setup1/lib/crypto-accumulators-master/inc/",
+					"/Users/gengwei/Desktop/veriMB/payload_setup1/payload_setup1/lib/crypto-accumulators-master/ext/dclxvi-20130411/",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -228,6 +307,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"/Users/gengwei/Desktop/veriMB/payload_setup1/payload_setup1/lib/crypto-accumulators-master/inc/",
+					"/Users/gengwei/Desktop/veriMB/payload_setup1/payload_setup1/lib/crypto-accumulators-master/ext/dclxvi-20130411/",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -239,6 +323,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/payload_setup1/lib/crypto-accumulators-master/lib",
+					"$(PROJECT_DIR)/payload_setup1/lib",
+					"$(PROJECT_DIR)/payload_setup1/lib/crypto-accumulators-master/ext/dclxvi-20130411",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +337,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/payload_setup1/lib/crypto-accumulators-master/lib",
+					"$(PROJECT_DIR)/payload_setup1/lib",
+					"$(PROJECT_DIR)/payload_setup1/lib/crypto-accumulators-master/ext/dclxvi-20130411",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
