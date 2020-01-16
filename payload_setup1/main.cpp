@@ -25,6 +25,9 @@ void print_patterns(PatternSet& ptns)
 
 
 int main(int argc, const char * argv[]) {
+    
+    //setup阶段
+    
     /*读入处理好后的pattern文件*/
     PatternLoader::load_pattern_file(pattern_path.data(), patterns);
     //print_patterns(patterns);

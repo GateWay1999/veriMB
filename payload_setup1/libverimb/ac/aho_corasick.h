@@ -115,8 +115,8 @@ namespace aho_corasick {
 				int start = -1;
 				int end = -1;
 				for (const auto& i : intervals) {
-					int cur_start = i.get_start();
-					int cur_end = i.get_end();
+					int cur_start =(int) (i.get_start());
+					int cur_end =(int) (i.get_end());
 					if (start == -1 || cur_start < start) {
 						start = cur_start;
 					}
@@ -471,7 +471,26 @@ namespace aho_corasick {
             
             /*算每个节点的acc*/
             queue<state<char>*> ac_queue;
-            ac_queue.push(d_root.get());
+            
+            
+            
+            
+            
+            vector<state<char>*> root_success = d_root->get_states();
+            for(int i = 0; i < root_success.size(); i++)
+            {
+                ac_queue.push(root_success[i]);
+                //cout<<"入队"<<endl;
+            }
+            
+            
+            G1DCLXVI temp_root_acc;
+            vector<reference_wrapper<Scalar>> setZero;
+            flint::BigInt flintZero(0);
+            ScalarDCLXVI scalarZero(flintZero);
+            setZero.push_back(scalarZero);
+            BilinearMapAccumulator::accumulateSet(setZero, keyset.getSecretKey(), temp_root_acc);
+            d_root->set_acc(temp_root_acc);
             
             while(!ac_queue.empty())
             {
@@ -481,6 +500,7 @@ namespace aho_corasick {
                     ac_queue.push(temp_success[i]);
                     //cout<<"入队"<<endl;
                 }
+                G1DCLXVI temp_acc = ac_queue.front()->prefix()->get_acc();
                 if(ac_queue.front()->get_emits().size()==0)
                 {
                     //cout<<"到了1"<<endl;
@@ -490,21 +510,23 @@ namespace aho_corasick {
                         continue;
                     }
                     /*当前节点不是某个pattern的结尾*/
-                    ac_queue.front()->set_acc(ac_queue.front()->prefix()->get_acc());
+                    ac_queue.front()->set_acc(temp_acc);
                 }
                 else
                 {
                     //cout<<"到了2"<<endl;
                     /*当前节点是某个pattern的结尾*/
-                    G1DCLXVI temp_acc = ac_queue.front()->prefix()->get_acc();
-                    int ruleid;
+                    
+                    int ruleid = -1;
                     for(auto i : ac_queue.front()->get_emits())
                     {
                         ruleid = i.second;
                         break;
                     }
                     
-                    BilinearMapAccumulator::accumulateSet(scalar_sets.at(ruleid), keyset.getSecretKey(), temp_acc);
+                    vector<reference_wrapper<Scalar>> temp_set(scalar_sets[ruleid]);
+                    
+                    BilinearMapAccumulator::accumulateSet(temp_set, keyset.getSecretKey(), temp_acc);
                     ac_queue.front()->set_acc(temp_acc);
                     
                 }
@@ -563,18 +585,18 @@ namespace aho_corasick {
 			return (*this);
 		}
 
-        vector<unique_ptr<Scalar>> str_to_scalar_array(string str, int num)
+        vector<Scalar*> str_to_scalar_array(string str, int num)
         {
-            vector<unique_ptr<Scalar>> temp_scalars;
+            vector<Scalar*> temp_scalars;
             ofstream file_writer("./"+to_string(num)+".txt", std::ios_base::out);
             file_writer << str;
             file_writer.close();
             ifstream filein("./"+to_string(num)+".txt", ios::binary);
             
             while (filein.peek()!=EOF) {
-                unique_ptr<Scalar> element = unique_new<ScalarDCLXVI>();
+                Scalar* element = new ScalarDCLXVI();
                 element -> readFromFile(filein);
-                temp_scalars.push_back(move(element));
+                temp_scalars.push_back(element);
             }
             return temp_scalars;
         }
@@ -584,20 +606,25 @@ namespace aho_corasick {
 			
             if (keyword.empty())
 				return;
-			if (keyword.size() > max_length)
-                max_length = keyword.size();
+			if (keyword.size() > max_length*32)
+                max_length = (int)((keyword.size()-1)/32+1);
             state_ptr_type cur_state = d_root.get();
 			for (const auto& ch : keyword) {
 				cur_state = cur_state->add_state(ch);
 			}
 			
             vector<reference_wrapper<Scalar>> scal_vec;
-            vector<unique_ptr<Scalar>> temp_vec = str_to_scalar_array(keyword, d_num_keywords);
+            scal_vec.clear();
+            //cout<<"长度为"<<keyword.size()<<endl;
+            string temp(max_length*32-keyword.size(), (char)0);
+                
+            vector<Scalar*> temp_vec = str_to_scalar_array(temp + keyword, d_num_keywords);
             
-            for(unique_ptr<Scalar>& element: temp_vec)
+            for(Scalar* element: temp_vec)
             {
                 scal_vec.push_back(*element);
             }
+            
             
             scalar_sets.push_back(scal_vec);
             
