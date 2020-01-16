@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA06105D23D02A7E00EB948B /* pattern_loader.h in Sources */ = {isa = PBXBuildFile; fileRef = DA06105C23D02A7D00EB948B /* pattern_loader.h */; };
 		DA9B8EDC23C2482C0055B15F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EDB23C2482C0055B15F /* main.cpp */; };
 		DA9B8EE923C24C0D0055B15F /* libaccum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9B8EE823C24C0D0055B15F /* libaccum.a */; };
-		DA9B8EEC23C24E680055B15F /* pattern_loader.h in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EEB23C24E670055B15F /* pattern_loader.h */; };
 		DA9B8EEE23C24E740055B15F /* pattern_loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EED23C24E740055B15F /* pattern_loader.cc */; };
 		DA9B8EF023C24EB30055B15F /* aho_corasick.h in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EEF23C24EB30055B15F /* aho_corasick.h */; };
 		DA9B8EF223C24EB60055B15F /* ac_adaptor.h in Sources */ = {isa = PBXBuildFile; fileRef = DA9B8EF123C24EB60055B15F /* ac_adaptor.h */; };
@@ -37,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA06105C23D02A7D00EB948B /* pattern_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pattern_loader.h; path = payload_setup1/libverimb/pattern_loader.h; sourceTree = "<group>"; };
+		DA06105E23D02A9F00EB948B /* element */ = {isa = PBXFileReference; lastKnownFileType = folder; path = element; sourceTree = "<group>"; };
 		DA9B8ED823C2482C0055B15F /* payload_setup1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = payload_setup1; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9B8EDB23C2482C0055B15F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DA9B8EE223C248DD0055B15F /* libverimb */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libverimb; sourceTree = "<group>"; };
@@ -45,7 +47,6 @@
 		DA9B8EE523C248DE0055B15F /* snort_test.pat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snort_test.pat; sourceTree = "<group>"; };
 		DA9B8EE623C24BD30055B15F /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
 		DA9B8EE823C24C0D0055B15F /* libaccum.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libaccum.a; path = "payload_setup1/lib/crypto-accumulators-master/lib/libaccum.a"; sourceTree = "<group>"; };
-		DA9B8EEB23C24E670055B15F /* pattern_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pattern_loader.h; sourceTree = "<group>"; };
 		DA9B8EED23C24E740055B15F /* pattern_loader.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pattern_loader.cc; path = payload_setup1/libverimb/pattern_loader.cc; sourceTree = "<group>"; };
 		DA9B8EEF23C24EB30055B15F /* aho_corasick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = aho_corasick.h; path = payload_setup1/libverimb/ac/aho_corasick.h; sourceTree = "<group>"; };
 		DA9B8EF123C24EB60055B15F /* ac_adaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ac_adaptor.h; path = payload_setup1/libverimb/ac/ac_adaptor.h; sourceTree = "<group>"; };
@@ -83,11 +84,11 @@
 		DA9B8ECF23C2482B0055B15F = {
 			isa = PBXGroup;
 			children = (
+				DA06105C23D02A7D00EB948B /* pattern_loader.h */,
 				DA9B8EF323C24EB80055B15F /* ac_adaptor.cc */,
 				DA9B8EF123C24EB60055B15F /* ac_adaptor.h */,
 				DA9B8EEF23C24EB30055B15F /* aho_corasick.h */,
 				DA9B8EED23C24E740055B15F /* pattern_loader.cc */,
-				DA9B8EEB23C24E670055B15F /* pattern_loader.h */,
 				DA9B8EDA23C2482C0055B15F /* payload_setup1 */,
 				DA9B8ED923C2482C0055B15F /* Products */,
 				DA9B8EE723C24C0D0055B15F /* Frameworks */,
@@ -105,6 +106,7 @@
 		DA9B8EDA23C2482C0055B15F /* payload_setup1 */ = {
 			isa = PBXGroup;
 			children = (
+				DA06105E23D02A9F00EB948B /* element */,
 				DA9B8EE623C24BD30055B15F /* lib */,
 				DA9B8EDB23C2482C0055B15F /* main.cpp */,
 				DA9B8EE223C248DD0055B15F /* libverimb */,
@@ -188,8 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA06105D23D02A7E00EB948B /* pattern_loader.h in Sources */,
 				DA9B8EDC23C2482C0055B15F /* main.cpp in Sources */,
-				DA9B8EEC23C24E680055B15F /* pattern_loader.h in Sources */,
 				DA9B8EEE23C24E740055B15F /* pattern_loader.cc in Sources */,
 				DA9B8EF023C24EB30055B15F /* aho_corasick.h in Sources */,
 				DA9B8EF223C24EB60055B15F /* ac_adaptor.h in Sources */,

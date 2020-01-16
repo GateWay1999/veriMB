@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     
     /*读入处理好后的pattern文件*/
     PatternLoader::load_pattern_file(pattern_path.data(), patterns);
-    //print_patterns(patterns);
+    
     
     /*保存规则集id、规则数目meta和secret*/
     /*生成secret*/
@@ -40,6 +40,11 @@ int main(int argc, const char * argv[]) {
     engine->init(patterns);
     
     /*计算每个节点的HMAC和每条规则的HMAC*/
+    /*计算每条规则的auth_r*/
+    
+    
+    
+    
     
     
     return 0;
